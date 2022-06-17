@@ -1,0 +1,36 @@
+%mainScrinFont {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.22;
+}
+
+%mainFont {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+%titleFont {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+%textFont {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+%linearBg {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+$offerBg: #000201;
+
+

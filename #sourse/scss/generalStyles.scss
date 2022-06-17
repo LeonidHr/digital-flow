@@ -1,0 +1,177 @@
+.button {
+  display: inline;
+  @extend %mainFont;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  & ._icon-Vector{
+    font-size: 0.75rem;
+  }
+
+  @media (max-height: 500px){
+    padding: 15px 19px;
+  }
+
+  &--blue {
+    width: 70%;
+    line-height: 1.25;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #074D88 0%, #61B3C9 100%);
+    position: relative;
+    z-index: 1;
+  }
+
+  &--w {
+    background: inherit;
+    color: #fff;
+    border: 1px solid #FFFFFF;
+  }
+
+  &--w:hover {
+    background: #fff;
+    color: inherit;
+    border: 1px solid inherit;
+
+    & ._icon-Vector::before {
+      color: inherit;
+    }
+  }
+
+  &--black {
+    border: 1px solid #000000;
+    background: inherit;
+    & ._icon-Vector::before {
+      color: #000;
+    }
+  }
+
+  &--black:hover {
+    color: #fff;
+    background-color: #000;
+
+    & ._icon-Vector::before {
+      color: inherit;
+    }
+  }
+
+  @media (max-width: $md2){
+    &--blue {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: $md3){
+    &--blue {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: $md4){
+    &--blue {
+      width: 90%;
+    }
+  }
+
+  &--blue::before {
+    @extend %linearBg;
+    content: "";
+    background: linear-gradient(90deg,#61B3C9 0%, #074D88 100%);
+    line-height: 1.25;
+    color: #FFFFFF;
+    transition: all 0.5s ease 0s;
+  }
+
+  &--blue::after {
+    @extend %linearBg;
+    content: "";
+    background: linear-gradient(90deg,#61B3C9 0%, #074D88 100%);
+    line-height: 1.25;
+    color: #FFFFFF;
+    transition: all 0.5s ease 0s;
+  }
+
+  &--blue:hover::after,
+  &--blue:hover::after {
+    opacity: 1;
+  }
+}
+
+.social {
+  display: flex;
+  
+  &__link:not(:last-child) {
+    margin: 0 10px 0 0 ;
+  }
+  
+  &__link {
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    color: #17181C;
+    background: #FFFFFF;
+    padding: 6px 5px;
+    transition: all 0.3s ease 0s;
+  }
+
+  @media (max-width: $md3){
+    &__link {
+      padding: 10px;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__link:hover {
+    color: #fff;
+    background-color: #17181C;
+  }
+
+  &__item {
+  }
+
+  & ._icon-tg {
+  }
+  & ._icon-vk {
+  }
+  & ._icon-insta {
+  }
+  & ._icon-email {
+  }
+  & ._icon-phone {
+  }
+}
+
+.title {
+  @extend %titleFont;
+
+  &--b {
+    color: #000000;
+  }
+
+  &--w {
+    color: #fff;
+  }
+}
+
+@media (max-width: $md2){
+  .title {
+    font-size: 2rem
+  }
+}
+
+.text {
+  @extend %textFont;
+
+  &--grey {
+    color: #606060;
+  }
+
+  &--b {
+    color: #1A1F25;
+  }
+
+  &--w {
+    color: #fff;
+  }
+}
