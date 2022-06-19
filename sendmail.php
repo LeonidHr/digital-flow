@@ -37,7 +37,7 @@
   if(!$mail->send()) {
     $message = 'Ошибка';
   } else {
-    'Данные отправлены';
+    $message = 'Данные отправлены';
   }
 
   $response = ['message' => $message];
