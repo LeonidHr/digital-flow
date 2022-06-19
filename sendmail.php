@@ -1,10 +1,20 @@
-<$php use PHPMailer/PHPMailer/PHPMailer; use PHPMailer/PHPMailer/Exception; require 'phpmailer/scr/Exception.php' ; require 'phpmailer/scr/PHPMailer.php' ; $mail=new PHPMailer(true); $mail->CharSet = 'UTF-8';
+<?php 
+  use PHPMailer\PHPMailer\PHPMailer; 
+  use PHPMailer\PHPMailer\Exception; 
+
+  
+  require 'phpmailer/src/Exception.php' ; 
+  require 'phpmailer/src/PHPMailer.php' ; 
+  
+  $mail = new PHPMailer(true); 
+  $mail->CharSet = 'UTF-8';
+  
   $mail->setLanguage('ru', 'phpmailer/language/');
   $mail->isHTML(true);
 
   $mail->setFrom('lkhristenok@gmail.com', 'user');
-  $mail->addAdress('hristenokleonid@gmail.com');
-  $mail->Subject('Новый заказ!');
+  $mail->addAddress('hristenokleonid@gmail.com');
+  $mail->Subject = 'Новый заказ!';
 
 
   $body = '<h1>Новый заказ!</h1>';
@@ -25,13 +35,13 @@
   $mail->Body = $body;
 
   if(!$mail->send()) {
-  $message = 'Ошибка';
+    $message = 'Ошибка';
   } else {
-  'Данные отправлены';
+    'Данные отправлены';
   }
 
   $response = ['message' => $message];
 
   header('Content-type: application/json');
   echo json_encode($response);
-  ?>
+?>
