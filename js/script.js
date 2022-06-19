@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       form.classList.add('_sending');
       document.body.classList.add('_lock-form');
 
-      let response = await fetch ('sendmail.php', {
+      let response = await fetch('sendmail.php', {
         method: 'POST',
         body: formData
       });
