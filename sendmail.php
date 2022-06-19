@@ -1,11 +1,17 @@
 <?php 
-  use PHPMailer\PHPMailer\PHPMailer; 
-  use PHPMailer\PHPMailer\Exception; 
-  
-  require 'phpmailer/src/Exception.php'; 
-  require 'phpmailer/src/PHPMailer.php'; 
-  
-  $mail = new PHPMailer(true); 
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+ 
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+$mail = new PHPMailer(true);
+
+try {
+
   $mail->CharSet = 'UTF-8';
   
   $mail->setLanguage('ru', 'phpmailer/language/');
@@ -43,4 +49,9 @@
 
   header('Content-type: application/json');
   echo json_encode($response);
+
+}  catch (Exception $e) {
+  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
 ?>
