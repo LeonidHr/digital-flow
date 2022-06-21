@@ -9,6 +9,7 @@
   background: inherit;
   width: 100%;
   transition: all 0.5s ease 0s;
+  z-index: 100;
 
   &__body {
     display: flex;
@@ -30,7 +31,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
 
   & .icon-menu span{
     background-color: #fff;

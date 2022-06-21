@@ -438,26 +438,28 @@
       <section class="offer">
         <div class="_container">
           <div class="offer__body">
-            <div class="offer__item">
-              <h2 class="title title--w offer__title">Заявка</h2>
-              <form class="form offer__form" id="form"  name="mainForm">
-                <div class="form__item">
-                  <label class="form__label" for="nameInput">Ваше имя</label>
-                  <input class="form__input _req _input" id="nameInput" type="text" name="name">
-                </div>
-                <div class="form__item">
-                  <label class="form__label" for="emailInput">Ваш Email</label>
-                  <input class="form__input _req _email" id="emailInput" type="email" name="email">
-                </div>
-                <div class="form__item">
-                  <label class="form__label" for="formTextarea">Сообщение</label>
-                  <textarea class="form__textarea" id="formTextarea" name="message"></textarea>
-                </div>
-                <button class="button button--w form__btn" type="submit">
-                  Отправить
-                  <div class="_icon-Vector"></div>
-                </button>
-              </form>
+            <div class="offer__item offer__item--form">
+              <div class="offer__item-body">
+                <h2 class="title title--w offer__title">Заявка</h2>
+                <form action="#" class="form offer__form" id="form" name="mainForm">
+                  <div class="form__item">
+                    <label class="form__label" for="nameInput">Ваше имя</label>
+                    <input class="form__input _req _input" id="nameInput" type="text" name="name">
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label" for="emailInput">Ваш Email</label>
+                    <input class="form__input _req _email" id="emailInput" type="email" name="email">
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label" for="formTextarea">Сообщение</label>
+                    <textarea class="form__textarea" id="formTextarea" name="message"></textarea>
+                  </div>
+                  <button class="button button--w form__btn" type="submit">
+                    Отправить
+                    <div class="_icon-Vector"></div>
+                  </button>
+                </form>
+              </div>
             </div>
             <div class="offer__item">
               <h2 class="title title--w offer__title offer__title--end">Спец предложения</h2>
@@ -502,13 +504,135 @@
             </div>
           </div>
         </div>
-        <img class="offer-bg" src="img/bg/form.png" alt="bg">
+        <div class="offer__error">
+          <div class="offer__error-body">
+            <div class="offer__error-number">404</div>
+            <h2 class="offer__error-title title title--w">Запрашиваемая страница не найдена</h2>
+            <button class="button button--w offer__error-btn btn-return">
+              Вернуться на главную
+              <div class="_icon-Vector"></div>
+            </button>
+          </div>
+        </div>
+        <div class="offer__ok">
+          <div class="offer__ok-body">
+            <div class="offer__ok-content">
+              <div class="_icon-vectorBig"></div>
+              <h4 class="offer__ok-title">Успешно оформлено!</h4>
+              <p class="offer__ok-text text text--grey">
+                Ваш заказ успешно оформлен! Спасибо что выбрали именно нас.
+              </p>
+            </div>
+            <div class="offer__ok-footer">
+              <div class="offer__ok-triangle"></div>
+              <button class="button button--w offer__ok-btn btn-return">
+                Вернуться на главную
+                <div class="_icon-Vector"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img class="offer-bg" src="img/bg/form.png" alt="bg" >   
       </section>
     </main>
 <footer class="footer">
   <div class="_container">
     <div class="footer__body">
-      
+      <div class="footer__content">
+        <div class="footer__content-column">
+          <article class="footer__item one">
+            <div class="footer__item-top">
+              <button class="footer__title">Пункт</button>
+              <div class="_icon-Vector"></div>
+            </div>
+            <div class="footer__item-content">
+              <div class="footer__text">
+                <p>
+                  В своём стремлении улучшить пользовательский опыт мы упускаем, что многие известные личности.
+                </p>
+                <p>Пункт</p>
+                <p>Пункт</p>
+              </div>
+            </div>
+          </article>
+          <article class="footer__item">
+            <div class="footer__item-top">
+              <button class="footer__title">Пункт</button>
+              <div class="_icon-Vector"></div>
+            </div>
+            <div class="footer__item-content">
+              <div class="footer__text">
+                <p>
+                  В своём стремлении улучшить пользовательский опыт мы упускаем, что многие известные личности.
+                </p>
+                <p>Пункт</p>
+                <p>Пункт</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="footer__content-column">
+          <article class="footer__item">
+            <div class="footer__item-top">
+              <button class="footer__title">Пункт</button>
+              <div class="_icon-Vector"></div>
+            </div>
+            <div class="footer__item-content">
+              <div class="footer__text">
+                <p>
+                  В своём стремлении улучшить пользовательский опыт мы упускаем, что многие известные личности.
+                </p>
+                <p>Пункт</p>
+                <p>Пункт</p>
+              </div>
+            </div>
+          </article>
+          <article class="footer__item">
+            <div class="footer__item-top">
+              <button class="footer__title">Контакты</button>
+                <div class="_icon-Vector"></div>
+            </div>
+            <div class="footer__item-content">
+              <div class="footer__text">
+                <a class="footer__link" href="#">
+                  <div class="_icon-phone footer__link-icon"></div>
+                  +380 555 555 555
+                </a>
+                <a class="footer__link" href="#">
+                  <div class="_icon-email footer__link-icon"></div>
+                  email@gmail.com
+                </a>
+                <a class="footer__link" href="#">
+                  <div class="_icon-location footer__link-icon"></div>
+                  г. Киев
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <a href="#" class="footer__logo logo">
+          <img class="logo-text" src="img/logo-text-white.png" alt="logo text" >
+        </a>
+        <div class="social">
+          <a href="#" class="social__link">
+            <div class="_icon-tg social__item"></div>
+          </a>
+          <a href="#" class="social__link">
+            <div class="_icon-vk social__item"></div>
+          </a>
+          <a href="#" class="social__link">
+            <div class="_icon-insta social__item"></div>
+          </a>
+          <a href="#" class="social__link">
+            <div class="_icon-email social__item"></div>
+          </a>
+          <a href="#" class="social__link">
+            <div class="_icon-phone social__item"></div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>  </div>

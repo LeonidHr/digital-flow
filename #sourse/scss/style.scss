@@ -525,12 +525,17 @@ body {
   }
 
   @media (max-width: $md2){
-    padding: 120px 0 100px 0;
+    padding: 190px 0 60px 0;
   }
 
   @media (max-width: $md3){
-    padding: 50px 0;
+    padding: 165px 0 50px 0;
   }
+
+  @media (max-width: $md4){
+    padding: 190px 0 50px 0;
+  }
+
 
   &__title {
     margin: 0 0 90px 0;
@@ -549,7 +554,7 @@ body {
 
   @media (max-width: $md3){
     &__body {
-      row-gap: 20px;
+      row-gap: 30px;
     }
   }
 
@@ -574,7 +579,7 @@ body {
     &__row {
       column-gap: 0;
       flex-direction: column;
-      row-gap: 20px;
+      row-gap: 30px;
       margin: 0;
     }
 
@@ -626,14 +631,55 @@ body {
   padding: 173px 0;
   position: relative;
 
+  @media (max-width: $md1){
+    padding: 100px 0;
+  }
+
+  @media (max-width: $md2){
+    padding: 60px 0 0 0;
+  }
+
   &__body {
     display: flex;
     position: relative;
     z-index: 2;
   }
 
+  @media (max-width: $md2){
+    &__body {
+      flex-direction: column-reverse;
+      row-gap: 40px;
+    }
+  }
+
   &__item {
     flex: 0 1 50%;
+  }
+
+  &__item--form {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__item-body {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: $md2){
+    &__item--form {
+      padding: 60px 0 0 0;
+    }
+
+    &__item--form::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30vw;
+      height: 100%;
+      width: 130vw;
+      background: url('../img/bg/form.png') center / cover no-repeat;
+    }
   }
 
   &__title {
@@ -655,6 +701,15 @@ body {
     justify-content: center;
     column-gap: 10px;
     padding: 0 0 0 30px;
+  }
+
+  @media (max-width: $md1){
+    &__row {
+      flex-direction: column;
+      row-gap: 15px;
+      padding: 0 0 0 10px;
+      margin: 50px 0 0 0;
+    }
   }
 
   &__kard {
@@ -729,10 +784,10 @@ body {
 
   &__kard-circle {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     width: 78px;
     height: 39px;
-    top: -1px;
+    top: -2px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0 0 100px 100px;
@@ -754,12 +809,219 @@ body {
     height: 100%;
     width: 50%;
   }
+
+  @media (max-width: $md2){
+    &-bg {
+      display: none;
+    }
+  }
+
+  &__error {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/bg/loading.png') center / cover no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+
+  &__error._active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__error-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  &__error-number {
+    font-weight: 400;
+    font-size: 144px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 40px 0;
+  }
+
+  @media (max-width: $md1){
+    &__error-number {
+      font-size: 100px;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  @media (max-width: $md3){
+    &__error-number {
+      font-size: 70px;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__error-title {
+    margin: 0 0 80px 0;
+  }
+
+  @media (max-width: $md1){
+    &__error-title {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  @media (max-width: $md3){
+    &__error-title {
+      margin: 0 0 30px 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__error-btn ._icon-Vector{
+    margin: 2px 0 0 22px;
+  }
+
+  @media (max-width: 305px){
+    &__error-btn ._icon-Vector{
+      margin: 2px 0 0 10px;
+    }
+  }
+
+  &__ok {
+    position: fixed;
+    overflow: auto;
+    z-index: 100;
+    top: -1px;
+    left: 0;
+    padding: 0 15px;
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/bg/ok.png') center / cover no-repeat;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__ok._active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__ok-body {
+    min-height: 100vh;
+    max-width: 690px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__ok-content {
+    background: $offerOkContentBg;
+    width: 100%;
+    padding: 30px 137px 15px 137px;
+  }
+
+  @media (max-width: $md3){
+    &__ok-content {
+      padding: 20px 50px 15px 50px;
+    }
+  }
+
+  @media (max-width: $md4){
+    &__ok-content {
+      padding: 20px 15px 15px 15px;
+    }
+  }
+
+  &__ok-content ._icon-vectorBig {
+    display: inline-block;
+    margin: 0 0 30px 0;
+    font-size: 40px;
+    padding: 30px 36px;
+    border-radius: 50%;
+    background: #79B5A5;
+  }
+
+  @media (max-width: $md4){
+    &__ok-content ._icon-vectorBig {
+      font-size: 30px;
+      padding: 20px 26px;
+    }
+  }
+
+  &__ok-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #212733;
+    margin: 0 0 15px 0;
+  }
+
+
+  &__ok-text {
+    margin: 0 0 15px 0;
+  }
+
+
+  &__ok-footer {
+    padding: 48px 137px 25px 137px;
+    width: 100%;
+    background: #7DBAAB;
+    position: relative;
+  }
+
+  @media (max-width: $md3){
+    &__ok-footer {
+      padding: 30px 0 20px 0;
+    }
+  }
+
+  &__ok-triangle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #FFFFFF;
+  }
+
+  &__ok-btn {
+    margin: 0 auto 15px auto;
+  }
+
+  &__ok-btn  ._icon-Vector { 
+    margin: 2px 0 0 22px;
+  }
+
+  @media (max-width: $md3){
+    &__ok-btn  ._icon-Vector { 
+      margin: 2px 0 0 10px;
+    }
+  }
   
 }
+
+
 
 body._lock-form {
   overflow: hidden;
 }
+
+
 
 .form {
   position: relative;
@@ -774,14 +1036,16 @@ body._lock-form {
     z-index: 200;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.5s ease 0s;
     background: url('../img/load/loading.gif') center / 70px no-repeat,
                 url('../img/bg/loading.png') center / cover no-repeat;
-    transition: all 0.5s ease 0s;
   }
 
   &._sending::after {
     opacity: 0.8;
     visibility: visible;
+    width: 100vw;
+    height: 100vh;
   }
  
   &__item {
@@ -826,13 +1090,24 @@ body._lock-form {
     transition: all 0.3s ease 0s;
   }
 
+  @media (max-width: $md2){
+    &__input {
+      min-width: 90%;
+    }
+
+    &__textarea {
+      min-width: 90%;
+      height: 50px;
+    }
+  }
+
   &__textarea:focus {
     border-bottom: 1px solid grey;
   }
 
   &__btn {
     display: inline-block;
-    margin: 40px 0 0 0;
+    margin: 40px 0 15px 0;
     padding: 17px 21px 17px 30px;
 
     & ._icon-Vector {
@@ -841,9 +1116,15 @@ body._lock-form {
     }
   }
 
+  @media (max-width: $md2){
+    &__btn {
+      margin-top: 25px;
+    }
+  }
+
 }
 
- 
+@import 'styleFooter';
 
 
 

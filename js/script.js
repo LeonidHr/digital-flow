@@ -85,6 +85,10 @@ const getSwiperHeight = () => {
   heightContAbout += 150;
   heightContPortfolio /= 1.9;
 
+  if (window.innerWidth <= 767) {
+    heightContAbout -= 150;
+  }
+
   //задаем стили
   sliderSwiperAbout.style.height = `${heightContAbout}px`;
   sliderSwiperPortfolio.style.height = `${heightContPortfolio}px`;
@@ -134,6 +138,10 @@ for (let i = 0; i < offerKards.length; i++) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('form');
+  const formError = document.querySelector('.offer__error');
+  const formOk = document.querySelector('.offer__ok');
+  const returnBtns = document.querySelectorAll('.btn-return');
+
   form.addEventListener("submit", formSend);
 
   async function formSend (e) {
@@ -152,23 +160,31 @@ document.addEventListener("DOMContentLoaded", function () {
         body: formData
       });
 
+      // задаем событие кнопкам для возврата
+      returnBtns.forEach(item => {
+        item.addEventListener("click", returnToHomePage);
+      });
+
       if (response.ok) {
         let result = await response.json();
         alert(result.message);
         form.reset();
 
         form.classList.remove('_sending');
-        document.body.classList.remove('_lock-form');
+        formOk.classList.add('_active');
+
       } else {
-        alert('Ошибка!');
         form.classList.remove('_sending');
-        document.body.classList.remove('_lock-form');
+        formError.classList.add('_active');
       }
-
-    } else {
-      alert('Заполните указанные поля!');
     }
+  }
 
+  // функция для возврата на основную стр
+  function returnToHomePage() {
+    formOk.classList.remove('_active');
+    formError.classList.remove('_active');
+    document.body.classList.remove('_lock-form');
   }
 
   // валидация формы
@@ -213,13 +229,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+//* споллер для футера =======================================================
+
+if (window.innerWidth <= 992) {
+  $(document).ready(function () {
+    $('.footer__item-top').click(function (event) {
+      if ($('.footer__item').hasClass('one')) {
+        $('.footer__item-top').not($(this)).removeClass('_active');
+        $('.footer__item-content').not($(this).next()).slideUp(300);
+      }
+  
+      $(this).toggleClass('_active').next().slideToggle(300);
+    });
+  });
+  
+}
 
 
 
 
+ /*
+  const footerTitle = document.querySelectorAll('.footer__title');
+  const footerText = document.querySelectorAll('.footer__text');
 
+  footerTitle.forEach(title => {
+    title.addEventListener("click", openSpoiler);
+  });
 
-
+  function openSpoiler (e) {
+    for (let i = 0; i < footerTitle.length; i++) {
+      if (footerTitle[i] != e.currentTarget) {
+        footerText[i].classList.remove('_open');
+      }
+      if (footerTitle[i] == e.currentTarget) {
+        footerText[i].classList.toggle('_open');
+      }
+    }
+  }
+  */
 
 
 
