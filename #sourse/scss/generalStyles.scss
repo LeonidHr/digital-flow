@@ -40,6 +40,7 @@
   }
 
   &--black {
+    color: #000;
     border: 1px solid #000000;
     background: inherit;
     & ._icon-Vector::before {
@@ -128,17 +129,6 @@
   }
 
   &__item {
-  }
-
-  & ._icon-tg {
-  }
-  & ._icon-vk {
-  }
-  & ._icon-insta {
-  }
-  & ._icon-email {
-  }
-  & ._icon-phone {
   }
 }
 

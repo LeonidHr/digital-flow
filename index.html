@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/iconFont.css">
   <title>Digital Flow</title>
 </head>
-<body>
+<body id="navigation">
 <header class="header">
   <div class="_container">
     <div class="header__body">
@@ -40,26 +40,26 @@
         </div>
         <ul class='menu__list'>
           <li class="menu__item">
-            <a href="#" class="menu__link">Главная</a>
+            <a href="#mainpage" class="menu__link">Главная</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">О компании</a>
+            <a href="#about" class="menu__link">О компании</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Портфолио</a>
+            <a href="#portfolio" class="menu__link">Портфолио</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Что мы предлагаем</a>
+            <a href="#service" class="menu__link">Что мы предлагаем</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Специальное предложение</a>
+            <a href="#offer" class="menu__link">Специальное предложение</a>
           </li>
         </ul>
         <div class="menu__btn">
-          <button class="button button--blue">
+          <a href="#offer" class="btn-offer button button--blue">
             Оставить заявку
             <div class="_icon-Vector"></div>
-          </button>
+          </a>
         </div>
         <div class="social">
           <a href="#" class="social__link">
@@ -83,21 +83,21 @@
   </div>
 </header>  <div class="wrapper">
     <main class="content">
-      <section class="mainscreen">
+      <section id="mainpage" class="mainscreen">
         <div class="_conteiner">
           <div class="mainscreen__body">
             <div class="mainscreen__top">
-              <div class="mainscreen__title">web applications</div>
-              <div class="mainscreen__subtitle">Повседневная практика.</div>
+              <h1 class="mainscreen__title">web applications</h1>
+              <p class="mainscreen__subtitle">Повседневная практика.</p>
             </div>
-            <button class="button button--black mainscreen__btn">
+            <a class="button button--black mainscreen__btn btn-offer" href="#offer">
               Спец предложение
               <div class="_icon-Vector"></div>
-            </button>
+            </a>
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__body">
           <div class="about__item about__img">
             <img src="img/about/1.png" alt="img">
@@ -107,7 +107,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="about__content content-swiper-about">
-                      <div class="title title--b about__title">О компании</div>
+                      <h2 class="title title--b about__title">О компании</h2>
                       <div class="text text--grey about__text">
                         <p>
                           Мы диджитал агентство занимаемся полным циклом продвижения компаний в интернете.
@@ -123,7 +123,7 @@
                 </div>
                  <div class="swiper-slide">
                   <div class="about__content content-swiper-about">
-                      <div class="title title--b about__title">О компании</div>
+                      <h2 class="title title--b about__title">О компании</>
                       <div class="text text--grey about__text">
                         <p>
                           Мы диджитал агентство занимаемся полным циклом продвижения компаний в интернете.
@@ -139,7 +139,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="about__content content-swiper-about">
-                      <div class="title title--b about__title">О компании</div>
+                      <h2 class="title title--b about__title">О компании</h2>
                       <div class="text text--grey about__text">
                         <p>
                           Мы диджитал агентство занимаемся полным циклом продвижения компаний в интернете.
@@ -155,7 +155,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="about__content content-swiper-about">
-                      <div class="title title--b about__title">О компании</div>
+                      <h2 class="title title--b about__title">О компании</h2>
                       <div class="text text--grey about__text">
                         <p>
                           Мы диджитал агентство занимаемся полным циклом продвижения компаний в интернете.
@@ -171,7 +171,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="about__content content-swiper-about">
-                      <div class="title title--b about__title">О компании</div>
+                      <h2 class="title title--b about__title">О компании</h2>
                       <div class="text text--grey about__text">
                         <p>
                           Мы диджитал агентство занимаемся полным циклом продвижения компаний в интернете.
@@ -187,7 +187,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="about__content content-swiper-about">
-                      <div class="title title--b about__title">О компании</div>
+                      <h2 class="title title--b about__title">О компании</h2>
                       <div class="text text--grey about__text">
                         <p>
                           Мы диджитал агентство занимаемся полным циклом продвижения компаний в интернете.
@@ -207,10 +207,10 @@
           </div> 
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="_container">
           <div class="portfolio__body">
-            <div class="title portfolio__title title--b">Портфолио</div>
+            <h2 class="title portfolio__title title--b">Портфолио</h2>
             <div class="swiper swiper-portfolio">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -265,177 +265,177 @@
           </div>
         </div>
       </section>
-      <section class="service">
+      <section class="service" id="service">
         <div class="_container">
-          <div class="title title--w service__title">Что мы предлагаем</div>
+          <h2 class="title title--w service__title">Что мы предлагаем</h2>
           <div class="service__content">
             <div class="service__row">
-              <div class="service__item">
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/1.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Высокий уровень исполнения 
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/2.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Гарантируем качество работы
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/3.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Выполним работу быстро
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/4.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Обеспечим поток заявок
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/5.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Автоматизируем работу 
                 </div>
-              </div>
+              </article>
             </div>
             <div class="service__row">
-              <div class="service__item">
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/6.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Разработаем уникальный дизайн
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/7.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Напишем чистый код 
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/8.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Контекстная реклама
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/9.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Третированная реклама 
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/10.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   SEO продвижение
                 </div>
-              </div>
+              </article>
             </div>
             <div class="service__row">
               <div class="service__item service__item--empty">
               </div>
-              <div class="service__item">
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/11.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Продвижение в социальных сетях
                 </div>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <button class="button button--w service__btn">
                   Подробнее
                   <div class="_icon-Vector"></div>
                 </button>
-              </div>
-              <div class="service__item">
+              </article>
+              <article class="service__item">
                 <div class="service__img">
                   <img src="img/iconsW/2.png" alt="like">
                 </div>
                 <div class="service__label text text--w">
                   Высокий уровень исполнения 
                 </div>
-              </div>
-              <div class="service__item service__item--empty">
-              </div>
+              </article>
+              <article class="service__item service__item--empty">
+              </article>
             </div>
           </div>
         </div>
       </section>
       <section class="advantage">
         <div class="_container">
-          <div class="title title--b advantage__title">Наши преимущества</div>
+          <h2 class="title title--b advantage__title">Наши преимущества</h2>
           <div class="advantage__body">
             <div class="advantage__row">
-              <div class="advantage__item">
+              <article class="advantage__item">
                 <div class="advantage__img">
                   <img src="img/iconsB/1.png" alt="monitor">
                 </div>
                 <div class="advantage__item-content">
-                  <div class="text text--b advantage__text">
+                  <p class="text text--b advantage__text">
                     Сделаем адаптивный дизайн, под любой вид устройств
-                  </div>
+                  </p>
                 </div>
-              </div> 
-              <div class="advantage__item">
+              </article> 
+              <article class="advantage__item">
                 <div class="advantage__img">
                   <img src="img/iconsB/2.png" alt="monitor">
                 </div>
                 <div class="advantage__item-content">
-                  <div class="text text--b advantage__text">
+                  <p class="text text--b advantage__text">
                     Установим на сайт счетчики аналитики и настроим возможность отслеживать результаты прямо с вашего мобильного телефона
-                  </div>
+                  </p>
                 </div>
-              </div>     
+              </article>     
             </div>
             <div class="advantage__row">
-              <div class="advantage__item">
+              <article class="advantage__item">
                 <div class="advantage__img">
                   <img src="img/iconsB/3.png" alt="speek">
                 </div>
                 <div class="advantage__item-content">
-                  <div class="text text--b advantage__text">
+                  <p class="text text--b advantage__text">
                     Настроим все возможные способы обратной связи. Заявки на почту, подключим онлайн консультанта, настроим телефонный звон с сайта, подключим Whatsapp к сайту
-                  </div>
+                  </p>
                 </div>
-              </div>   
-              <div class="advantage__item">
+              </article>   
+              <article class="advantage__item">
                 <div class="advantage__img">
                   <img src="img/iconsB/4.png" alt="speek">
                 </div>
                 <div class="advantage__item-content">
-                  <div class="text text--b advantage__text">
+                  <p class="text text--b advantage__text">
                     Проведем анализ вашей сферы и конкурентов, предложим лучшие инструменты для продвижения в интернете
-                  </div>
+                  </p>
                 </div>
-              </div>   
+              </article>   
             </div>
           </div>
         </div>
       </section>
-      <section class="offer">
+      <section class="offer" id="offer">
         <div class="_container">
           <div class="offer__body">
             <div class="offer__item offer__item--form">
@@ -464,42 +464,42 @@
             <div class="offer__item">
               <h2 class="title title--w offer__title offer__title--end">Спец предложения</h2>
               <div class="offer__row" id="kards-container">
-                <div class="offer__kard" data-kard="0">
+                <article class="offer__kard" data-kard="0">
                   <div class="offer__kard-circle"></div>
                   <div class="offer__kard-content">
-                    <div class="offer__kard-title">Landing Page</div>
-                    <div class="offer__kard-text">
+                    <h4 class="offer__kard-title">Landing Page</h4>
+                    <p class="offer__kard-text">
                       продающая посадочная страница. 
-                    </div>
+                    </p>
                   </div>
                   <div class="offer__kard-footer">
                     <div class="offer__kard-disprice">150 000 ₸</div>
                     <div class="offer__kard-price">150 000 ₸</div>
                   </div>
-                </div>
-                <div class="offer__kard _active" data-kard="1">
+                </article>
+                <article class="offer__kard _active" data-kard="1">
                   <div class="offer__kard-circle"></div>
                   <div class="offer__kard-content">
-                    <div class="offer__kard-title">Бизнес сайт</div>
-                    <div class="offer__kard-text">Корпоративный сайт</div>
+                    <h4 class="offer__kard-title">Бизнес сайт</h4>
+                    <p class="offer__kard-text">Корпоративный сайт</p>
                   </div>
                   <div class="offer__kard-footer">
                     <div class="offer__kard-disprice">150 000 ₸</div>
                     <div class="offer__kard-price">150 000 ₸</div>
                   </div>
-                </div>
-                <div class="offer__kard" data-kard="2">
+                </article>
+                <article class="offer__kard" data-kard="2">
                   <div class="offer__kard-circle"></div>
                   <div class="offer__kard-content">
-                    <div class="offer__kard-title">Контекстная реклама</div>
-                    <div class="offer__kard-text">
+                    <h4 class="offer__kard-title">Контекстная реклама</h4>
+                    <p class="offer__kard-text">
                       Запуск контекстной рекламы на месяц
-                    </div>
+                    </p>
                   </div>
                   <div class="offer__kard-footer">
                     <div class="offer__kard-price">Бесплатно</div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>
